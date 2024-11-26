@@ -1,0 +1,179 @@
+/* Cabeçalho */
+header {
+    height: 150px;
+    background-color: #363636;
+}
+  
+#logo img {
+    width: 128px;
+    height: 128px;
+    margin-top: 40px;
+    position: absolute;
+    left: calc(50% - 60px);
+}
+
+#check {
+    display: none;
+}
+
+#whatsapp_header img {
+    width: 42px;
+    height: 42px;
+    margin-top: 70px;
+    position: absolute;
+    left: calc(50% - 145px);
+}
+
+#telegram_header img {
+    width: 42px;
+    height: 42px;
+    margin-top: 70px;
+    margin-left: 170px;
+    position: absolute;
+    left: calc(50% - 60px);
+}
+
+#texto_canais {
+    display: none;
+}
+
+label {
+    font-size: 1.85em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: #FCFCFE;
+}
+
+nav ul {
+    list-style: none;
+    background-color: rgba(52, 53, 56, 0.95);
+    height: 100vh;
+    position: fixed;
+    top: 40px;
+    right: -50%;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    border-bottom: 1px dashed #FCFCFE;
+    text-align: right;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FCFCFE;
+}
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 576px) {
+
+    /* Layout */
+    .Container {
+      max-width: 540px;
+    }
+}
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 768px) {
+
+    /* Layout */
+    .Container {
+      max-width: 720px;
+    }
+  
+    /*
+    .card img {
+      height: 11em;
+    }
+    */
+}
+
+/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+
+    /* Layout */
+    .Container {
+        max-width: 960px;
+    } 
+}
+
+  /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1200px) {
+
+    /* Layout */
+    .Container {
+      max-width: 1140px;
+    }
+  
+    /* Cabeçalho */
+    header {
+      height: 135px;
+    }
+  
+    #logo img {
+      width: 128px;
+      height: 128px;
+      margin-top: 25px;
+      position: relative;
+    }
+  
+    #whatsapp_header img {
+      width: 24px;
+      height: 24px;
+      margin-top: 5px;
+      margin-left: 0px;
+      position: absolute;
+      left: calc(50% - 60px);
+    }
+  
+    #telegram_header img {
+      width: 24px;
+      height: 24px;
+      margin-top: 5px;
+      margin-left: 29px;
+      position: absolute;
+      left: calc(50% - 60px);
+    }
+
+    #texto_canais {
+      display: block;
+      font-size: 0.9em;
+      position: absolute;
+      left: calc(50% - 60px);
+      margin-left: 60px;
+      top: 6px;
+      color: #FCFCFE;
+    }
+  
+    label {
+      display: none;
+    }
+  
+    nav ul {
+      position: static;
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      margin-top: 40px;
+    }
+  
+    nav ul li {
+      float: left;
+      border: 0;
+    }
+  
+    nav ul li a {
+      color: #FCFCFE;
+    }
+  
+    nav ul li a:hover {
+      color: #ffbf00;
+    }
+  }
