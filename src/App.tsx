@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header/Header.tsx'
-import Main from './MainTier/Main.tsx'
+import Main from './Main/Main.tsx'
 import './App.css'
 
 function App() {
