@@ -1,0 +1,29 @@
+footer {
+    padding: 50px 0px;
+    background-color: #2B3D5B;
+    font-size: 0.875em;
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#social {
+    margin-bottom: 25px;
+}
+  
+#social img {
+    width: 30;
+    height: 30px;
+}
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 576px) {
+
+    #social {
+      margin: 0;
+    }
+}
