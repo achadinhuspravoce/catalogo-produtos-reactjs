@@ -1,6 +1,11 @@
 import './Carrossel.css'
 
-const Conteudo = ({children, categoria}) => {
+type Categoria = {
+  categoria:string;
+  children:any;
+}
+
+const Conteudo = ({children, categoria} : Categoria) => {
   return (
     <>
         <section id="categorias">

@@ -7,7 +7,7 @@ import Card from './Carrossel/Card.tsx'
 import GrupoVenda from './GrupoVenda/GrupoVenda.tsx'
 import Sobre from './Sobre/Sobre.tsx'
 import Footer from './Footer/Footer.tsx'
-import BotaoUp from './Footer/botaoUp.tsx'
+import BotaoUp from './Footer/BotaoUp.tsx'
 
 function App() {
   return (

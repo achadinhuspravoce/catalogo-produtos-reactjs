@@ -1,7 +1,7 @@
 import React from 'react'
 import './CarrosselItem.css'
 
-const CarrosselItem = ({children}) => {
+const CarrosselItem = ({children}:any) => {
   return (
     <>
         <div className="carousel-item active">

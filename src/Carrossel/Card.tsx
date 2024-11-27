@@ -2,7 +2,12 @@ import React from 'react'
 import './Card.css'
 import imgCard from '../assets/20241113_01.png'
 
-const Card = ({titulo, descricao}) => {
+type Produto = {
+  titulo: string;
+  descricao: string;
+};
+
+const Card = ({titulo, descricao} : Produto) => {
   return (
     <>
         <div className="card">
