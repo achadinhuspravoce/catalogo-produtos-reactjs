@@ -1,0 +1,24 @@
+/* Conteúdo */
+#categorias {
+    padding: 50px 0px;
+}
+
+#categorias h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #363636;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
