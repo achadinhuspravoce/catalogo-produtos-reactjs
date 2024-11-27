@@ -1,4 +1,3 @@
-import React from 'react'
 import './CarrosselItem.css'
 
 const CarrosselItem = ({children}:any) => {

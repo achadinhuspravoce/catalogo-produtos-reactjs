@@ -1,4 +1,3 @@
-import React from 'react'
 import './Card.css'
 import imgCard from '../assets/20241113_01.png'
 
