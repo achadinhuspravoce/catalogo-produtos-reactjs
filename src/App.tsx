@@ -1,33 +1,65 @@
+import React, { useEffect, useState} from 'react'
 import Header from './Header/Header.tsx'
 import Main from './Main/Main.tsx'
 import './App.css'
 import Carrossel from './Carrossel/Carrossel.tsx'
-import CarrosselItem from './Carrossel/CarrosselItem.tsx'
 import Card from './Carrossel/Card.tsx'
 import GrupoVenda from './GrupoVenda/GrupoVenda.tsx'
 import Sobre from './Sobre/Sobre.tsx'
 import Footer from './Footer/Footer.tsx'
 import BotaoUp from './Footer/BotaoUp.tsx'
 
+
 function App() {
+
+  interface Produto {
+    nome: string;
+    preco: string;
+    descricao: string;
+    rodape: string;
+    catalogo: string;
+    filiacao: string;
+    linkProduto: string;
+    linkImagem: string;
+    freteFree: boolean;
+  }
+  const [produtos, setRecords] = useState<Produto[]>([])
+  const apiKey = import.meta.env.VITE_APP_API_KEY;
+  console.log('API Key:', apiKey);
+
+  useEffect(() => {
+    fetch('https://catalogoproduto.azurewebsites.net/api/CatalogoProduto', {
+      method: "GET", 
+      headers:{
+        "x-functions-key": `${apiKey}`,
+        "content-type": "application/json"
+     }})
+    .then(response => response.json())
+    .then(data => setRecords(data))
+    .catch(err => console.log(err))
+  }, []);
+
+  const categorias = Array.from(new Set(produtos.map(p =>
+    p.catalogo
+  )));
+
   return (
     <>
       <Header></Header>
       <Main></Main>
-      <Carrossel categoria="Cozinha">
-        <CarrosselItem>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-        </CarrosselItem>
-        <CarrosselItem>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-          <Card titulo="Conjunto de Bowls Inox Eletrolux" descricao="Conjunto de bowls em inox da Electrolux: duráveis, práticos e ideais para preparar e servir alimentos."></Card>
-        </CarrosselItem>
-      </Carrossel>
+      
+      <section id="categorias">
+        <div className="Container">
+          {categorias.map((c, index) => (
+            <Carrossel categoria={c}>
+              {produtos.filter(p => p.catalogo === c).map((card, index) => (
+                <Card key={index} titulo={card.nome} descricao={card.descricao} />
+              ))}
+            </Carrossel>
+          ))}
+        </div>
+      </section>
+
       <GrupoVenda></GrupoVenda>
       <Sobre></Sobre>
       <Footer></Footer>

@@ -1,10 +1,10 @@
-import React from 'react'
 import './CarrosselItem.css'
 
-const CarrosselItem = ({children}:any) => {
+const CarrosselItem = ({children, ativo}:any) => {
+  const a = `carousel-item ${ativo ? 'active' : ''}`;
   return (
     <>
-        <div className="carousel-item active">
+        <div className={a}>
             <div className="cards-wrapper">
                 {children}
             </div>

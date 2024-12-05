@@ -20,7 +20,7 @@ footer a {
     height: 30px;
 }
 
-/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* Smartphone Landscape */
 @media (min-width: 576px) {
 
     #social {
