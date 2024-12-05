@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import { useEffect, useState} from 'react'
 import Header from './Header/Header.tsx'
 import Main from './Main/Main.tsx'
 import './App.css'
@@ -50,10 +50,10 @@ function App() {
       
       <section id="categorias">
         <div className="Container">
-          {categorias.map((c, index) => (
-            <Carrossel categoria={c}>
-              {produtos.filter(p => p.catalogo === c).map((card, index) => (
-                <Card key={index} titulo={card.nome} descricao={card.descricao} />
+          {categorias.map((c, i) => (
+            <Carrossel key={i} categoria={c}>
+              {produtos.filter(p => p.catalogo === c).map((card, icard) => (
+                <Card key={icard} titulo={card.nome} descricao={card.descricao} />
               ))}
             </Carrossel>
           ))}
