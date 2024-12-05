@@ -25,7 +25,6 @@ function App() {
   }
   const [produtos, setRecords] = useState<Produto[]>([])
   const apiKey = import.meta.env.VITE_APP_API_KEY;
-  console.log('API Key:', apiKey);
 
   useEffect(() => {
     fetch('https://catalogoproduto.azurewebsites.net/api/CatalogoProduto', {
