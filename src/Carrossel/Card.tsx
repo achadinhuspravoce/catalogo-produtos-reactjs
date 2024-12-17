@@ -1,20 +1,27 @@
 import './Card.css'
-import imgCard from '../assets/20241113_01.png'
+import {Produto} from '../Entities/Produto'
+import logoFiliado from '../assets/$filiado$_logo.png'
 
-type Produto = {
-  titulo: string;
-  descricao: string;
-};
-
-const Card = ({titulo, descricao} : Produto) => {
+const Card = ({p} : {p: Produto}) => {
+  const filiado = logoFiliado.replace("$filiado$", p.filiacao.toLowerCase());
+  const freteFree = { 
+    visibility: (p.freteFree ? 'visible' : 'hidden') as 'visible' | 'hidden'
+  }
+  
   return (
     <>
       <div className="card">
-        <img src={imgCard} className="card-img-top" alt="Produto Card" />
+        <div className='fretegratis-container'>
+          <img src={p.linkImagem} className="card-img-top" alt={p.nome} />
+          <span style={freteFree} className="fretegratis">Frete Grátis</span>
+        </div>
+        <div className="filiado">
+          <img src={filiado} alt={p.filiacao} />
+        </div>
         <div className="card-body">
-            <h5 className="card-title">{titulo}</h5>
-            <p className="card-text">{descricao}</p>
-            <a href="https://amzn.to/4eV2BWv" className="botao" target="_blank">Saiba Mais</a>
+            <h5 className="card-title">{p.nome}</h5>
+            <p className="card-text">{p.descricao}</p>
+            <a href={p.linkProduto} className="botao" target="_blank" rel="noopener noreferrer">Saiba Mais</a>
         </div>
       </div>
     </>

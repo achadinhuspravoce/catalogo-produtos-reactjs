@@ -8,29 +8,17 @@ import GrupoVenda from './GrupoVenda/GrupoVenda.tsx'
 import Sobre from './Sobre/Sobre.tsx'
 import Footer from './Footer/Footer.tsx'
 import BotaoUp from './Footer/BotaoUp.tsx'
-
+import {Produto} from './Entities/Produto'
 
 function App() {
 
-  interface Produto {
-    nome: string;
-    preco: string;
-    descricao: string;
-    rodape: string;
-    catalogo: string;
-    filiacao: string;
-    linkProduto: string;
-    linkImagem: string;
-    freteFree: boolean;
-  }
   const [produtos, setRecords] = useState<Produto[]>([])
-  const apiKey = import.meta.env.VITE_APP_API_KEY;
 
   useEffect(() => {
     fetch('https://catalogoproduto.azurewebsites.net/api/CatalogoProduto', {
       method: "GET", 
       headers:{
-        "x-functions-key": `${apiKey}`,
+        "x-functions-key": `${import.meta.env.VITE_APP_API_KEY}`,
         "content-type": "application/json"
      }})
     .then(response => response.json())
@@ -51,8 +39,8 @@ function App() {
         <div className="Container">
           {categorias.map((c, i) => (
             <Carrossel key={i} categoria={c}>
-              {produtos.filter(p => p.catalogo === c).map((card, icard) => (
-                <Card key={icard} titulo={card.nome} descricao={card.descricao} />
+              {produtos.filter(pro => pro.catalogo === c).map((card, icard) => (
+                <Card key={icard} p={card} />
               ))}
             </Carrossel>
           ))}

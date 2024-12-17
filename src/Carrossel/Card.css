@@ -1,18 +1,17 @@
 /* Cartões */
-.cards-wrapper {
-    display: flex;
-    justify-content: center;
-}
-.card img {
-    max-width: 100%;
-    max-height: 100%;
-}
 .card {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
     border-radius: 0;
 }
+
+.card-img-top {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+}
+
 .card-title {
     font-weight: bold;
 }
@@ -29,6 +28,37 @@
     padding: 0.375rem 0.75rem;
     border: 2px solid #ffbf00;
     border-radius: 0.375rem;
+}
+
+.filiado {
+    margin: 0px;
+    max-width: 100%;
+    border: 0px;
+    padding: 0.375rem 0.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+.filiado img {
+    margin: 0px;
+    max-width: 25%;
+}
+
+/* Contêiner de Flexbox */ 
+.fretegratis-container { 
+    position: relative; 
+    display: inline-block; 
+    justify-content: right; /* Centraliza horizontalmente */ 
+    align-items: flex-end; /* Alinha verticalmente ao final do contêiner */ 
+}
+
+.fretegratis {
+    background-color: rgba(0, 100, 5, 0.6); /* Fundo semitransparente para contraste */ 
+    color: white; 
+    padding: 2px 5px; 
+    border-radius: 2px; 
+    font-size: 11px; /* Ajuste conforme necessário */
+    position: absolute;
 }
 
 /* Smartphone Landscape */

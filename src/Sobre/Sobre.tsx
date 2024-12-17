@@ -7,10 +7,12 @@ const Sobre = () => {
             <div className="Container Flex2">
                 <div id="textoSobre">
                     <h2>Entenda mais sobre o Achadinhus</h2>
-                    <p>Bem-vindo à nossa revista digital, um espaço dedicado para apresentar a você a melhor seleção de produtos cuidadosamente escolhidos. Aqui, você encontrará uma variedade de itens que atendem a diferentes necessidades e estilos de vida, desde novidades tecnológicas até artigos de decoração e moda.</p>
-                    <p className="fw-light fst-italic text-center">Nossa missão é conectar você aos produtos que tornam seu dia a dia mais prático e encantador.</p>
-                    <p>Além de serem soluções perfeitas para você, nossos produtos também são opções incríveis para presentear aqueles que você mais ama.</p>
-                    <p>Explore, descubra e deixe-se inspirar pela nossa coleção! Seu próximo item favorito pode estar a apenas uma página de distância.</p>
+                    <br />
+                    <p>Bem-vindo a um mundo onde cada escolha faz a diferença no seu dia a dia. Aqui, o nosso catálogo digital foi cuidadosamente selecionado para oferecer praticidade, funcionalidade e beleza, tornando suas tarefas mais leves e seus momentos mais especiais.</p>
+                    <p>Imagine soluções que se adaptam perfeitamente às suas necessidades, seja em casa, no trabalho, em viagens ou em momentos especiais. Com design inteligente e utilidade, cada peça se torna um aliado indispensável para as pequenas e grandes atividades da sua rotina, uma verdadeira mão na roda, não é mesmo?</p>
+                    <p className="fw-light fst-italic text-center">Nossa missão é conectar você as melhores soluções que tornam seu dia a dia mais prático e encantador.</p>
+                    <p>Aqui é o seu espaço onde inovação e simplicidade se encontram, proporcionando praticidade sem abrir mão da elegância. Permita-se explorar o que há de mais versátil e útil, projetado para simplificar e encantar.</p>
+                    <p>Sua rotina merece ser descomplicada. Escolha o que combina com você e torne cada dia mais eficiente, confortável e especial.</p>
                 </div>
             </div>
         </section>
