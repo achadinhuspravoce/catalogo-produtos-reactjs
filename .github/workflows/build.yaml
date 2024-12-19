@@ -28,10 +28,11 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Deploy to gh-pages 
+        uses: actions/deploy-pages@v1 
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }} 
+          target-branch: gh-pages 
+          publish-dir: ./dist
     env:
       REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
