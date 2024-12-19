@@ -18,17 +18,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set environment variables
         run: | 
           echo "VITE_APP_API_KEY=${{ secrets.VITE_APP_API_KEY }}" >> $GITHUB_ENV
+      
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
+      
       - name: Install dependencies
         run: npm ci
+      
       - name: Build
         run: npm run build
+      
       - name: Create CNAME file
         run: echo 'catalogo.achadinhus.com.br' > ./dist/CNAME
     env:
@@ -39,6 +44,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
