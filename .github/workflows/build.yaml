@@ -8,17 +8,16 @@ on:
     branches:
       - main
 
-# Permite que este job clone o repositório e crie uma página de deploy
-permissions:
-  contents: write
-
 jobs:
-  build:
+  # Single deploy job since we're just deploying
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+      
       - name: Set environment variables
         run: | 
           echo "VITE_APP_API_KEY=${{ secrets.VITE_APP_API_KEY }}" >> $GITHUB_ENV
@@ -27,29 +26,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build
         run: npm run build
-      
+
       - name: Create CNAME file
         run: echo 'catalogo.achadinhus.com.br' > ./dist/CNAME
-    env:
-      REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
-
-  # Single deploy job since we're just deploying
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          cname: catalogo.achadinhus.com.br
+    env:
+      REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
