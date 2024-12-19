@@ -8,12 +8,15 @@ on:
     branches:
       - main
 
+# Permite que este job clone o repositório e crie uma página de deploy
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,11 +31,17 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Deploy to gh-pages 
-        uses: actions/deploy-pages@v1 
-        with: 
-          token: ${{ secrets.GITHUB_TOKEN }} 
-          target-branch: gh-pages 
-          publish-dir: ./dist
     env:
       REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+
+  # Single deploy job since we're just deploying
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
