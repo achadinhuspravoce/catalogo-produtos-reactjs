@@ -1,7 +1,7 @@
 import './Main.css'
-import amazonLogo from '../assets/amazon_logo.png'
-import magaluLogo from '../assets/magalu_logo.png'
-import mercadolivreLogo from '../assets/mercado_livre_logo.png'
+import amazonLogo from '/amazon_logo.png'
+import magaluLogo from '/magalu_logo.png'
+import mercadolivreLogo from '/mercado_livre_logo.png'
 
 
 const Main = () => {

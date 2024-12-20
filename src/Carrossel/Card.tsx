@@ -1,9 +1,9 @@
 import './Card.css'
 import {Produto} from '../Entities/Produto'
-import logoFiliado from '../assets/$filiado$_logo.png'
 
 const Card = ({p} : {p: Produto}) => {
-  const filiado = logoFiliado.replace("$filiado$", p.filiacao.toLowerCase());
+  const filiado = `/${p.filiacao.toLowerCase()}_logo.png`;
+  
   const freteFree = { 
     visibility: (p.freteFree ? 'visible' : 'hidden') as 'visible' | 'hidden'
   }
