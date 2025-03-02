@@ -1,6 +1,6 @@
 import './Footer.css'
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Link as LinkScroll, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import youtube from '../assets/youtube.png'
 import facebook from '../assets/facebook.png'
 import instagram from '../assets/instagram.png'

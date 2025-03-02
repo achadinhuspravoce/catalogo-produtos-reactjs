@@ -1,6 +1,6 @@
 import  './Header.css'
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Link as LinkScroll, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import achadinhusLogo from '../assets/achadinhus_amarelo_logo.png'
 import waBranco from '../assets/whatsapp_branco.png'
 import teBranco from '../assets/telegram_branco.png'
