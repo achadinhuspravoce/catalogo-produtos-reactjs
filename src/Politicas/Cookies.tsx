@@ -30,7 +30,7 @@ function Cookies() {
         </section>
 
         <footer>
-          <p>Se tiver dúvidas, entre em contato conosco pelo e-mail:&nbsp;<a href="mailto:achadinhus.pravoce@gmail.com?subject=Dúvida sobre a Política de Cookies&body=Olá, gostaria de mais informações sobre a Política de Cookies do Achadinhus.">achadinhus.pravoce@gmail.com</a>
+          <p>Se tiver dúvidas, entre em contato conosco pelo e-mail:&nbsp;<a href="mailto:achadinhus.pravoce@gmail.com?subject=D%C3%BAvida%20sobre%20a%20Pol%C3%ADtica%20de%20Cookies&body=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Pol%C3%ADtica%20de%20Cookies%20do%20Achadinhus.">achadinhus.pravoce@gmail.com</a>
           </p>
         </footer>
       </div>

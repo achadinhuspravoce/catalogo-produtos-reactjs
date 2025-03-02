@@ -18,7 +18,7 @@ const Sobre = () => {
                     <p>Aqui é o seu espaço para explorar o que há de mais versátil e útil, projetado para simplificar e encantar. Sua rotina merece ser descomplicada! Escolha o que combina com você e torne cada dia mais eficiente, confortável e especial.</p>
                     <p>Fique à vontade para explorar nosso catálogo e seguir nossas redes sociais para não perder nenhuma oferta. Obrigado por fazer parte da nossa comunidade!</p>
                     <p>&#127760;&nbsp;Conecte-se conosco! Siga&nbsp;<a target="_blank" href="https://linktr.ee/achadinhus.pravoce">@achadinhus.pravoce</a> e fique por dentro das melhores ofertas!</p>
-                    <p>&#128233;&nbsp;Entre em contato:&nbsp;<a href="mailto:achadinhus.pravoce@gmail.com?subject=Quero saber mais sobre os achados incríveis!&body=Olá, gostaria de mais informações sobre os produtos e ofertas do Achadinhus.">achadinhus.pravoce@gmail.com</a></p>
+                    <p>&#128233;&nbsp;Entre em contato:&nbsp;<a href="mailto:achadinhus.pravoce@gmail.com?subject=Quero%20saber%20mais%20sobre%20os%20achados%20incr%C3%ADveis!&body=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20e%20ofertas%20do%20Achadinhus.">achadinhus.pravoce@gmail.com</a></p>
                 </div>
             </div>
         </section>
