@@ -5,6 +5,15 @@
     background-position: center;
 }
 
+#sobre a {
+    color: #ffbf00;
+    text-decoration: none;
+}
+
+#sobre a:hover {
+    text-decoration: underline;
+}
+
 #textoSobre {
     color: #363636;
     padding: 0px 10px;
@@ -13,6 +22,10 @@
 #textoSobre h2 {
     margin-bottom: 10px;
     text-align: center;
+}
+
+.missao p {
+    width: 200px;
 }
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

@@ -1,4 +1,5 @@
 import { useEffect, useState} from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './Header/Header.tsx'
 import Main from './Main/Main.tsx'
 import './App.css'
@@ -8,6 +9,8 @@ import GrupoVenda from './GrupoVenda/GrupoVenda.tsx'
 import Sobre from './Sobre/Sobre.tsx'
 import Footer from './Footer/Footer.tsx'
 import BotaoUp from './Footer/BotaoUp.tsx'
+import Privacidade from './Politicas/Privacidade.tsx'
+import Cookies from './Politicas/Cookies.tsx'
 import {Produto} from './Entities/Produto'
 
 function App() {
@@ -32,25 +35,34 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <Main></Main>
+      <Router>
+        <Header></Header>
+        <Routes>
+          <Route path="/politica/privacidade" element={<Privacidade />} />
+          <Route path="/politica/cookies" element={<Cookies />} />
+          <Route path="/" element={
+            <>
+              <Main></Main>
+              <section id="categorias">
+                <div className="Container">
+                  {categorias.map((c, i) => (
+                    <Carrossel key={i} categoria={c}>
+                      {produtos.filter(pro => pro.catalogo === c).map((card, icard) => (
+                        <Card key={icard} p={card} />
+                      ))}
+                    </Carrossel>
+                  ))}
+                </div>
+              </section>
+              <GrupoVenda></GrupoVenda>
+              <Sobre></Sobre>
+            </>
+          }/>
+        </Routes>
+        <Footer></Footer>
+        <BotaoUp></BotaoUp>  
+      </Router>
       
-      <section id="categorias">
-        <div className="Container">
-          {categorias.map((c, i) => (
-            <Carrossel key={i} categoria={c}>
-              {produtos.filter(pro => pro.catalogo === c).map((card, icard) => (
-                <Card key={icard} p={card} />
-              ))}
-            </Carrossel>
-          ))}
-        </div>
-      </section>
-
-      <GrupoVenda></GrupoVenda>
-      <Sobre></Sobre>
-      <Footer></Footer>
-      <BotaoUp></BotaoUp>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Carrossel.css'
 import CarrosselItem from './CarrosselItem';
+import { v4 as uuidv4 } from 'uuid';
 
 type Categoria = {
   categoria:string;
@@ -11,7 +12,7 @@ type Categoria = {
 const Carrossel = ({children, categoria} : Categoria) => {
   
   const [cardsPorItem, setCardsPorItem] = useState(4);
-  const id_carroseel = `carousel_${categoria}`;
+  const id_carroseel = `carousel_${uuidv4()}`;
 
   const atualizarCardsPorItem = () => {
       if (window.innerWidth < 701) {

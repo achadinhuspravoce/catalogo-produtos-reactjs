@@ -20,6 +20,41 @@ footer a {
     height: 30px;
 }
 
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links li button {
+    text-decoration: none;
+    color: #FCFCFE;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.footer-links li:not(:last-child)::after {
+    content: " | ";
+    color: #FCFCFE;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FCFCFE;
+    font-weight: 500;
+}
+
+.footer-links a:hover, .footer-links button:hover {
+    text-decoration: underline;
+}
+
 /* Smartphone Landscape */
 @media (min-width: 576px) {
 

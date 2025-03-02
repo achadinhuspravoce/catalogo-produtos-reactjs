@@ -38,9 +38,7 @@ body {
   display: flex;
 }
 
-.Flex {
-  justify-content: space-between;
-}
+
 
 .Flex2 {
   align-items: center;
@@ -110,6 +108,10 @@ body {
     display: none;
   }
 
+  .Flex {
+    justify-content: space-between;
+  }
+  
   /* One page */
   .Flex3 {
     flex-direction: row;

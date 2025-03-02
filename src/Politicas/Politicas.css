@@ -1,0 +1,55 @@
+.politicas {
+    padding: 0em 1em;
+}
+
+.politicas header, .politicas footer {
+    all: unset;
+}
+
+.politicas footer {
+    margin-bottom: 3.0em;
+    display: block;
+}
+
+.politicas h1 {
+    margin: 0.9em 0;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+
+.politicas h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.politicas h1, .politicas h2 {
+    color: #363636;
+}
+
+.politicas p {
+    color: #363636;
+}
+
+.politicas ul {
+    margin-left: 20px;
+}
+
+.politicas a {
+    color: #ffbf00;
+    text-decoration: none;
+}
+
+.politicas a:hover {
+    text-decoration: underline;
+}
+
+.politicas .margem {
+    margin-bottom: 3.0em;
+}
+
+@media (min-width: 1200px) {
+    .politicas {
+        padding: 0em;
+    }
+}
