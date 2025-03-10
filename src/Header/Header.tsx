@@ -33,24 +33,24 @@ const Header = () => {
         <header id="inicio">
             <div className="Container Flex">
                 <div id="logo">
-                    <img src={achadinhusLogo} alt="achadinhus" />
+                    <img src={achadinhusLogo} loading="lazy" alt="achadinhus" />
                 </div>
                 <div className="rede-sociais">
                   <div>
                     <div>
                         <a href="https://whatsapp.com/channel/0029VafNLQP0bIdefGel6g38" target="_blank">
-                            <img src={waBranco} alt="whatsapp" title="Abrir Catálogo no Whatsapp" />
+                            <img src={waBranco} loading="lazy" alt="whatsapp" title="Abrir Catálogo no Whatsapp" />
                         </a>
                     </div>
                     <div>
                         <a href="https://t.me/+IZgDquxDovU0NDJh" target="_blank">
-                            <img src={teBranco} alt="telegram" title="Abrir Catálogo no Telegram" />
+                            <img src={teBranco} loading="lazy" alt="telegram" title="Abrir Catálogo no Telegram" />
                         </a>
                     </div>
                   </div>
                   <span>Nosso Catálogo, acesse!</span>
                 </div>
-                <nav>
+                <nav aria-label="breadcrumb">
                     <input type="checkbox" id="check" />
                     <label htmlFor="check">&#x268c;</label>
                     <ul>

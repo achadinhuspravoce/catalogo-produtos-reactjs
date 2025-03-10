@@ -12,11 +12,11 @@ const Card = ({p} : {p: Produto}) => {
     <>
       <div className="card">
         <div className='fretegratis-container'>
-          <img src={p.linkImagem} className="card-img-top" alt={p.nome} />
+          <img src={p.linkImagem} className="card-img-top" loading="lazy" alt={p.nome} />
           <span style={freteFree} className="fretegratis">Frete Grátis</span>
         </div>
         <div className="filiado">
-          <img src={filiado} alt={p.filiacao} />
+          <img src={filiado} loading="lazy" alt={p.filiacao} />
         </div>
         <div className="card-body">
             <h5 className="card-title">{p.nome}</h5>

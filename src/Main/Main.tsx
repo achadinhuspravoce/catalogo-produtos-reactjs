@@ -13,9 +13,9 @@ const Main = () => {
           <h2>Descubra os melhores achados da internet para aproveitar e surpreender quem você ama!</h2>
           <div className="parceiros">
             <h3>Trabalhamos com as melhores Lojas nos melhores Marketing places</h3>
-            <img src={amazonLogo} alt="Amazon" />
-            <img src={magaluLogo} alt="Magalu" />
-            <img src={mercadolivreLogo} alt="Mercado Livre" />
+            <img src={amazonLogo} loading="lazy" alt="Amazon" />
+            <img src={magaluLogo} loading="lazy" alt="Magalu" />
+            <img src={mercadolivreLogo} loading="lazy" alt="Mercado Livre" />
           </div>
         </div>
       </main>

@@ -16,18 +16,18 @@ const GrupoVenda = () => {
                 </div>
                 <div id="whatsapp_box">
                     <div id="qrcode_wa">
-                        <img src={qrcodewa} alt="qrcode" />
+                        <img src={qrcodewa} loading="lazy" alt="qrcode" />
                     </div>
                     <a href="https://whatsapp.com/channel/0029VafNLQP0bIdefGel6g38" target="_blank">
-                        <img src={whatsapp} alt="whatsapp" title="Abrir Catálogo no Whatsapp" width="64" height="64" />
+                        <img src={whatsapp} loading="lazy" alt="whatsapp" title="Abrir Catálogo no Whatsapp" width="64" height="64" />
                     </a>
                 </div>
                 <div id="telegram_box">
                     <a href="https://t.me/+IZgDquxDovU0NDJh" target="_blank">
-                        <img src={telegram} alt="telegram" title="Abrir Catálogo no Telegram" width="64" height="64" />
+                        <img src={telegram} loading="lazy" alt="telegram" title="Abrir Catálogo no Telegram" width="64" height="64" />
                     </a>
                     <div id="qrcode_te">
-                        <img src={qrcodete} alt="qrcode" />
+                        <img src={qrcodete} loading="lazy" alt="qrcode" />
                     </div>
                 </div>
             </div>

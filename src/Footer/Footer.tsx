@@ -46,10 +46,10 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div id="social">
-                    <a href="https://www.youtube.com/@achadinhus.pravoce" target="_blank"><img src={youtube} alt="youtube" /></a>
-                    <a href="https://www.facebook.com/achadinhus.pravoce" target="_blank"><img src={facebook} alt="facebook" /></a>
-                    <a href="https://www.instagram.com/achadinhus.pravoce/" target="_blank"><img src={instagram} alt="instagram" /></a>
-                    <a href="https://www.tiktok.com/@achadinhus.pravoce" target="_blank"><img src={tiktok} alt="tiktok" /></a>
+                    <a href="https://www.youtube.com/@achadinhus.pravoce" target="_blank"><img src={youtube} loading="lazy" alt="youtube" /></a>
+                    <a href="https://www.facebook.com/achadinhus.pravoce" target="_blank"><img src={facebook} loading="lazy" alt="facebook" /></a>
+                    <a href="https://www.instagram.com/achadinhus.pravoce/" target="_blank"><img src={instagram} loading="lazy" alt="instagram" /></a>
+                    <a href="https://www.tiktok.com/@achadinhus.pravoce" target="_blank"><img src={tiktok} loading="lazy" alt="tiktok" /></a>
                 </div>
             </div>
         </footer>

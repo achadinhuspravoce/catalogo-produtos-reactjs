@@ -4,7 +4,7 @@ import topo from '../assets/topo.png'
 const BotaoUp = () => {
   return (
     <>
-        <a href="#inicio" id="topo"><img src={topo} alt="topo do site" /></a>
+        <a href="#inicio" id="topo"><img src={topo} loading="lazy" alt="topo do site" /></a>
     </>
   )
 }
